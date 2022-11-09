@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/listar.css">
+    <title>Usuários</title>
+</head>
+<body>
+    <header>
+        <div><a href="/cadastro"><h1>Cadastrar</h1></a></div>
+
+        <div><a href="/listar"><h1>Usuários</h1></a></div>
+
+        <form action="/deslogar" method="post">
+            <input class="deslogar" type="submit" value="Deslogar">
+          </form>
+    </header>
+    <h1 class="titulo">Usuários</h1>
+    <div class="container">
+
+    <% usuarios.forEach(function(usuario){ %>
+        <div class="card">
+            <img src="img/ator.png" />
+        <h1><%= usuario.name %></h1>
+        <h1><%= usuario.user %></h1>
+        <h1><%= usuario.password %></h1>
+    </div>
+
+     <% }); %>
+    </div>
+   
+</body>
+</html>
